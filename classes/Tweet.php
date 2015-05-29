@@ -1,9 +1,13 @@
 <?php
 
+/**
+ * Class Tweet
+ */
 class Tweet
 {
-
+    /* @var int */
     protected $id;
+    /* @var string */
     protected $text;
 
     /**

@@ -1,13 +1,26 @@
 <?php
-
+/**
+ * Class Twitter
+ */
 class Twitter
 {
-    protected $consumerKey = 'YZMK5hB4fetB3D0AbZAOEAZJf';
-    protected $consumerSecret = 'VC0bBWBLii4d583JY8j7cREpb5TTKSYZ1qjflrY7cR1SrrSCQB';
+    /* @var string */
+    protected $consumerKey = '';
+    /* @var string */
+    protected $consumerSecret = '';
+    /* @var mixed */
     protected $authentication = null;
+    /* @var array */
     protected $tweets = array();
+    /* @var string */
     protected $username;
 
+    public function __construct(){
+        $config = include __DIR__ . '/../config/global.php';
+        $this->consumerKey = $config['twitter']['consumer_key'];
+        $this->consumerSecret= $config['twitter']['consumer_secret'];
+    }
+    
     /**
      * Authenticate with twitter
      * @return $this

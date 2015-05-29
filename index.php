@@ -24,4 +24,3 @@ try {
     echo 'Error: ' . $e->getMessage() . "\n";
     echo "Please check and fix the cause of errors and try again.\n";
 }
-
